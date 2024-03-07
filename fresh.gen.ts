@@ -12,6 +12,7 @@ import * as $hackathons_new_index from "./routes/hackathons/new/index.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login_index from "./routes/login/index.tsx";
 import * as $signin_index from "./routes/signin/index.tsx";
+import * as $thanks_index from "./routes/thanks/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -27,6 +28,7 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/login/index.tsx": $login_index,
     "./routes/signin/index.tsx": $signin_index,
+    "./routes/thanks/index.tsx": $thanks_index,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
