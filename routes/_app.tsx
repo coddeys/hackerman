@@ -28,7 +28,7 @@ function Header() {
                 src="/nedapLogoBlue.svg"
                 width="128"
                 height="128"
-                alt="the Fresh logo: a sliced lemon dripping with juice"
+                alt="the nedap logo"
               />
             </a>
           </div>
