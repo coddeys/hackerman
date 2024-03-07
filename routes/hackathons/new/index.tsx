@@ -112,13 +112,8 @@ export default function createHackathon() {
         type="submit"
         class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
       >
-        Sign in
+        Create
       </button>
-
-      <p class="text-center text-sm text-gray-500">
-        No account?
-        <a class="underline" href="#">Sign up</a>
-      </p>
     </form>
   </div>
 </div>
