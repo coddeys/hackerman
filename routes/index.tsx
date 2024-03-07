@@ -5,23 +5,37 @@ export default function Home() {
   const count = useSignal(3);
   return (
     
-    <div class="px-164 py-8 mx-auto bg-[#86efac]">
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
-        <h1 class="text-sm font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
-      </div>
+    <div class="">
+      <Banner />
     </div>
   );
 }
 
+function Banner() {
+  return (
+      <section className="bg-gray-900 text-white">
+        <div className="mx-auto max-w-screen-xl px-2 py-32 lg:flex lg:h-screen lg:items-center">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1
+                className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
+            >
+              SUPER COOL HACKATHONS
+            </h1>
+
+            <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+              Code like the wind, debug like a ninja, and hack like there's no tomorrow! Welcome to Hackathons where sleep is optional and caffeine is mandatory. Let's turn bugs into features and pizza into code!
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                  className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                  href="#"
+              >
+                Create Hackathon
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+  )
+}
