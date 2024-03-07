@@ -1,19 +1,17 @@
-import { PageProps } from "$fresh/server.ts";
-
-export default function SignInForm(props: PageProps) {
+export default function Login() {
     return (
-<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-lg">
-    <h1 class="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">Get started today</h1>
+<section class="relative flex flex-wrap lg:h-screen lg:items-center">
+  <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+    <div class="mx-auto max-w-lg text-center">
+      <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 
-    <p class="mx-auto mt-4 max-w-md text-center text-gray-500">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt dolores deleniti
-      inventore quaerat mollitia?
-    </p>
+      <p class="mt-4 text-gray-500">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
+        ipsa culpa autem, at itaque nostrum!
+      </p>
+    </div>
 
-    <form action="#" class="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
-      <p class="text-center text-lg font-medium">Sign in to your account</p>
-
+    <form action="#" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
       <div>
         <label for="email" class="sr-only">Email</label>
 
@@ -78,19 +76,29 @@ export default function SignInForm(props: PageProps) {
         </div>
       </div>
 
-      <button
-        type="submit"
-        class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
-      >
-        Sign in
-      </button>
+      <div class="flex items-center justify-between">
+        <p class="text-sm text-gray-500">
+          No account?
+          <a class="underline" href="signin">Sign up</a>
+        </p>
 
-      <p class="text-center text-sm text-gray-500">
-        No account?
-        <a class="underline" href="#">Sign up</a>
-      </p>
+        <button
+          type="submit"
+          class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+        >
+          Sign in
+        </button>
+      </div>
     </form>
   </div>
-</div>
+
+  <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+    <img
+      alt=""
+      src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+  </div>
+</section>
     );
 }
