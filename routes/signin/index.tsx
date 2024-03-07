@@ -38,7 +38,7 @@ export default function SignIn(props: PageProps) {
               nam dolorum aliquam, quibusdam aperiam voluptatum.
             </p>
 
-            <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+            <form action="createUser" method="post" class="mt-8 grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
                 <label
                   for="FirstName"
@@ -164,4 +164,8 @@ export default function SignIn(props: PageProps) {
       </div>
     </section>
   );
+}
+
+async function createUser() {
+  
 }

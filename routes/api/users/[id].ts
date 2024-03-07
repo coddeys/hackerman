@@ -10,7 +10,7 @@ interface User {
 
 const kv = Deno.openKv();
 
-export const handler: Handlers<User | Null> = {
+export const handler: Handlers<User | null> = {
     async GET(_req, ctx) {
         const id = ctx.params.id;
         const key = ["user", id];
