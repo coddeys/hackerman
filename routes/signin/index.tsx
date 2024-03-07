@@ -32,7 +32,7 @@ export default function SignIn(props: PageProps) {
         </a>
 
         <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-          Welcome to Squid 🦑
+          Welcome to the Hackerman
         </h1>
 
         <p class="mt-4 leading-relaxed text-gray-500">
@@ -135,7 +135,7 @@ export default function SignIn(props: PageProps) {
 
             <p class="mt-4 text-sm text-gray-500 sm:mt-0">
               Already have an account?
-              <a href="#" class="text-gray-700 underline">Log in</a>.
+              <a href="/login" class="text-gray-700 underline">Log in</a>.
             </p>
           </div>
         </form>
