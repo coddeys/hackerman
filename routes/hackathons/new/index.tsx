@@ -1,5 +1,8 @@
 export default function createHackathon() {
-    // var currentDate = new Date();
+    var date = new Date();
+    var currentDate = date.toISOString().split('T')[0];
+    date.setDate(date.getDate() + 365);
+    var maxDate = date.toISOString().split('T')[0];
     return (
         <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-lg">
@@ -40,7 +43,7 @@ export default function createHackathon() {
 
         <div class="relative">
           <input
-          type="date" id="start" name="trip-start" value="2024-03-07" min="2018-01-01" max="2050-12-31"
+            type="date" id="start" name="trip-start" value={currentDate} min={currentDate} max={maxDate}
             class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
             placeholder="Enter start date"
           />
@@ -75,6 +78,7 @@ export default function createHackathon() {
 
   <div class="relative">
     <input
+      type="date" id="start" name="trip-start" value={currentDate} min={currentDate} max={maxDate}
       class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
       placeholder="Enter end date"
     />
