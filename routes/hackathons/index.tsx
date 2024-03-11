@@ -49,15 +49,15 @@ export default function ViewHackathons() {
 
 function ViewHackathonsHeader() {
   return (
-    <header className="bg-gray-50">
+    <header className="bg-gray-900 text-white">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="text-center sm:text-left">
-            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              Welcome to the hub of all our Hackathons!
+            <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+              Welcome to the hub of all our Hackathons
             </h1>
 
-            <p className="mt-1.5 text-sm text-gray-500">
+            <p className="mt-1.5 text-sm text-white-500">
               Create a new Hackathon or join an existing one!
             </p>
           </div>
