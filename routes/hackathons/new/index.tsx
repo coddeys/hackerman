@@ -7,12 +7,14 @@ interface Hackathon {
   desc: string;
   startDate: string;
   endDate: string;
-};
+}
 
 export async function createHackathon(hackathon: Hackathon) {
   const hackathonKey = ["Hackathon", hackathon.id];
 
-  const kv = await Deno.openKv("https://api.deno.com/databases/0319ed70-c0a9-4215-8499-8c4c9aaa1fbd/connect");
+  const kv = await Deno.openKv(
+    "https://api.deno.com/databases/0319ed70-c0a9-4215-8499-8c4c9aaa1fbd/connect",
+  );
   const ok = await kv.atomic().set(hackathonKey, hackathon).commit();
 
   if (!ok) throw new Error("Something went wrong.");
@@ -32,9 +34,15 @@ export const handler: Handlers = {
     const endDate = form.get("end-date")?.toString();
 
     const createdHackathon = createHackathon(
-      { id: id, name: name, desc: desc, startDate: startDate, endDate: endDate }
-    )
-    
+      {
+        id: id,
+        name: name,
+        desc: desc,
+        startDate: startDate,
+        endDate: endDate,
+      },
+    );
+
     // Redirect User to thank you page.
     const headers = new Headers();
     headers.set("location", "/thanks");
@@ -62,9 +70,8 @@ export default function viewHackathon() {
           method="post"
           class="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
         >
-
           <div>
-      <label for="name" class="sr-only">name</label>
+            <label for="name" class="sr-only">name</label>
 
             <div class="relative">
               <input
