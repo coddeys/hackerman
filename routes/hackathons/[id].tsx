@@ -41,6 +41,7 @@ export default function ViewHackathon() {
           </ul>
         </div>
       </div>
+      <VoteButton />
     </div>
   );
 }
@@ -174,5 +175,18 @@ function Buttons() {
         </svg>
       </button>
     </span>
+  );
+}
+
+function VoteButton() {
+  return (
+    <div className="mx-auto max-w-screen-xl py-8 sm:px-6 sm:py-8 lg:px-8">
+      <div className="sm:flex sm:items-center sm:justify-center">
+          <button type="button"
+                  className="mb-2 block w-full rounded-lg px-5 py-3 text-sm font-medium text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+            Vote for a winner!</button>
+
+      </div>
+    </div>
   );
 }
