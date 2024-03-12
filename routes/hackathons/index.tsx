@@ -1,11 +1,3 @@
-interface Hackathon {
-  id: string;
-  name: string;
-  desc: string;
-  startDate: string;
-  endDate: string;
-}
-
 export default function ViewHackathons() {
   return (
     <div className="">
@@ -78,23 +70,25 @@ function ViewHackathonsHeader() {
 }
 
 function HackathonCard({ title, desc, date, state, createdBy }) {
-  let colorvar = "";
+  let color = "";
   if (state == "Ongoing") {
-    colorvar = "bg-green-600 ";
+    color = "bg-green-600 ";
   }
   if (state == "Upcoming") {
-    colorvar = "bg-blue-600 ";
+    color = "bg-blue-600 ";
   }
   if (state == "Finished") {
-    colorvar = "bg-red-600 ";
+    color = "bg-red-600 ";
   }
-
+  let id = 1;
   return (
-    <article class="rounded-xl border-2 border-gray-100 bg-white">
-      <div class="flex items-start gap-4 p-4 sm:p-6 lg:p-8">
+    <article className="rounded-xl border-2 border-gray-300 bg-white">
+      <div className="flex items-start gap-4 p-4 sm:p-6 lg:p-8">
         <div>
           <h3 className="font-medium sm:text-lg">
-            <a href="#" className="hover:underline">{title}</a>
+            <a href={"hackathons/" + id} className="hover:underline">
+              {title}
+            </a>
           </h3>
 
           <p className="line-clamp-2 text-sm text-gray-700">
@@ -106,7 +100,9 @@ function HackathonCard({ title, desc, date, state, createdBy }) {
               <p className="text-xs">{date}</p>
             </div>
 
-            <span className="hidden sm:block" aria-hidden="true">&middot;</span>
+            <span className="hidden sm:block" aria-hidden="true">
+              &middot;
+            </span>
 
             <p className="hidden sm:block sm:text-xs sm:text-gray-500">
               Created by
@@ -117,12 +113,11 @@ function HackathonCard({ title, desc, date, state, createdBy }) {
           </div>
         </div>
       </div>
-
       <div className="flex justify-end">
         <strong
           id="state_banner"
-          className={colorvar +
-            "-mb-[2px] -me-[2px] inline-flex items-center gap-1 rounded-ee-xl rounded-ss-xl  px-3 py-1.5 text-white"}
+          className={color +
+            "-mb-[2px] -me-[2px] inline-flex items-center gap-1 rounded-xl rounded-ee-xl rounded-ss-xl  px-3 py-1.5 text-white"}
         >
           <span className="text-[10px] font-medium sm:text-xs">{state}</span>
         </strong>
