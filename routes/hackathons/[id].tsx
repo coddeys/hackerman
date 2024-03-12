@@ -88,7 +88,7 @@ function ProjectCard({ id, title, desc, createdBy }) {
   }
 
   return (
-    <article class="rounded-xl border-2 border-gray-100 bg-white">
+    <article class="rounded-xl border-2 border-gray-300 bg-white">
       <div class="flex items-start gap-4 p-4 sm:p-6 lg:p-8">
         <a href="#" className="block shrink-0">
           <img
