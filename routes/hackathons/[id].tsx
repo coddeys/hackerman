@@ -99,16 +99,6 @@ function ProjectCard({ id, title, desc, createdBy }) {
           />
         </a>
 
-        {/*<a className="block text-teal-600" href="/">*/}
-        {/*  <img*/}
-        {/*      className="my-6"*/}
-        {/*      src="/nedapLogoBlue.svg"*/}
-        {/*      width="128"*/}
-        {/*      height="128"*/}
-        {/*      alt="the nedap logo"*/}
-        {/*  />*/}
-        {/*</a>*/}
-
         <div>
           <h3 className="font-medium sm:text-lg">
             <a href="#" className="hover:underline">{title}</a>
