@@ -24,18 +24,46 @@ export default function ViewHackathon() {
             </li>
             <li className="rounded-xl border-2 border-gray-300 bg-white">
               <ProjectCard
-                title={"Awesome project!"}
-                desc={"There has never been a project this awesome"}
-                createdBy={" Mees"}
+                title={"Mirror repo docs to Slite"}
+                desc={"Implement a documentation mirror for MD files in repos. This way we can have documentation close to the code (and modify it holistically as part of implementing features) whilst also providing access to said documentation on our single documentation platform — Slite."}
+
+                createdBy={" Jamie"}
                 id={2}
               />
             </li>
             <li className="rounded-xl border-2 border-gray-300 bg-white">
               <ProjectCard
-                title={"The best project"}
-                desc={"This is the bestest project ever"}
-                createdBy={" Ryan"}
+                title={"Improve Backstage to make it ready for being a Developer Portal"}
+                desc={"Explore and improve the way documentation works to make it a valuable replacement for Slite for maintained documentation"}
+                createdBy={" Hidde"}
                 id={3}
+              />
+            </li>
+            <li className="rounded-xl border-2 border-gray-300 bg-white">
+              <ProjectCard
+                title={"ActiveLLM: Integrate Large Language Models with Rails"}
+                desc={""}
+
+                createdBy={" Abdelkader"}
+                id={4}
+              />
+            </li>
+            <li className="rounded-xl border-2 border-gray-300 bg-white">
+              <ProjectCard
+                title={"Ask God (Kotlin MultiPlatform App)"}
+                desc={""}
+
+                createdBy={" Martin"}
+                id={5}
+              />
+            </li>
+            <li className="rounded-xl border-2 border-gray-300 bg-white">
+              <ProjectCard
+                title={"Idea: create an graph chart for all applications in Appia and how they interact"}
+                desc={""}
+
+                createdBy={" Jeffrey"}
+                id={6}
               />
             </li>
           </ul>
@@ -61,8 +89,6 @@ function HackathonHeader() {
             </p>
             <p><strong>Format:</strong> hybrid hackathon</p>
             <p><strong>Location:</strong> Groenlo Building 8b-R5 Workshop Big)</p>
-            <p><strong>Zoom link:</strong> <a href="https://nedap.zoom.us/j/84702293915?pwd=RDNXeVpjWmJZcFIwNWN5bTVHRnllZz09&from=addon">https://nedap.zoom.us/j/84702293915?pwd=RDNXeVpjWmJZcFIwNWN5bTVHRnllZz09&from=addon</a> </p>
-
     <div>
 <p className="mt-8"><strong>Schedule:</strong></p>
     <ul className="my-4 list-circle mx-8">
@@ -103,16 +129,22 @@ function ProjectCard({ id, title, desc, createdBy }) {
   if (id == "1") {
     img = "/hackermanImage.jpeg";
   } else if (id == "2") {
-    img = "/nedapLogoBlue.svg";
+    img = "https://blogiestools.com/wp-content/uploads/2021/01/Slite-review.jpg";
   } else if (id == "3") {
     img = "/unicorn.png";
+  } else if (id == "4") {
+    img = "https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg";
+  } else if (id == "5") {
+    img = "https://logowik.com/content/uploads/images/kotlin.jpg";
+  } else {
+    img = "/nedapLogoBlue.svg";
   }
 
   return (
     <article class="">
       <div class="flex items-start gap-8 p-4 sm:p-6 lg:p-8">
 
-        <div className="w-1/2">
+        <div className="w-1/3">
         <a href="#" className="block shrink-0">
           <img
             alt=""
@@ -120,7 +152,7 @@ function ProjectCard({ id, title, desc, createdBy }) {
           />
         </a>
       </div>
-        <div className="w-1/2">
+        <div className="w-2/3">
           <h3 className="font-medium sm:text-lg">
             <a href="#" className="hover:underline">{title}</a>
           </h3>

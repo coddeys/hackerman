@@ -8,6 +8,8 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $api_users_id_ from "./routes/api/users/[id].ts";
 import * as $api_users_index from "./routes/api/users/index.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
+import * as $hackathons_2 from "./routes/hackathons/2.tsx";
+import * as $hackathons_3 from "./routes/hackathons/3.tsx";
 import * as $hackathons_id_ from "./routes/hackathons/[id].tsx";
 import * as $hackathons_index from "./routes/hackathons/index.tsx";
 import * as $hackathons_new_index from "./routes/hackathons/new/index.tsx";
@@ -26,6 +28,8 @@ const manifest = {
     "./routes/api/users/[id].ts": $api_users_id_,
     "./routes/api/users/index.ts": $api_users_index,
     "./routes/greet/[name].tsx": $greet_name_,
+    "./routes/hackathons/2.tsx": $hackathons_2,
+    "./routes/hackathons/3.tsx": $hackathons_3,
     "./routes/hackathons/[id].tsx": $hackathons_id_,
     "./routes/hackathons/index.tsx": $hackathons_index,
     "./routes/hackathons/new/index.tsx": $hackathons_new_index,
