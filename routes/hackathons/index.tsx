@@ -5,31 +5,34 @@ export default function ViewHackathons() {
       <div className="mx-auto max-w-screen-xl px-4 py-2 sm:px-6 sm:py-12 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <ul className="x-data x-masonry grid grid-cols-3 gap-4">
-            <li className="h-64">
+            <li className="p-4 rounded-xl border-2">
               <HackathonCard
-                title={"Super cool Hackathon"}
-                desc={"This is a super cool hackathon"}
+                id={1}
+                title={"Platform Tribe Hackathon"}
+                desc={"Bring your brightest minds to this hackathon!"}
                 date={"04-03-2024"}
-                state={"Finished"}
-                createdBy={" Dima"}
-              />
-            </li>
-            <li className="h-64">
-              <HackathonCard
-                title={"Awesome Hackathon!"}
-                desc={"There has never been a hackathon this awesome"}
-                date={"11-03-2024"}
                 state={"Ongoing"}
-                createdBy={" Mees"}
+                createdBy={"Hydra Squad"}
               />
             </li>
-            <li className="h-64">
+            <li className="p-4 rounded-xl border-2">
               <HackathonCard
-                title={"The best Hackathon"}
-                desc={"This is the bestest hackathon ever"}
+                id={2}
+                title={"Healthcare Economy Hackathon"}
+                desc={"You can apply for free, as an individual, or as a team of 3 members."}
+                date={"11-03-2024"}
+                state={"Upcoming"}
+                createdBy={"Platform Tribe"}
+              />
+            </li>
+            <li className="p-4 rounded-xl border-2">
+              <HackathonCard
+                id={3}
+                title={"European Healthcare Hackathon"}
+                desc={"We bring hackers, students, entrepreneurs, healthcare, and industry experts together to create new ideas and technologies for diabetology, surgery, transplantology, patient care and comfort"}
                 date={"18-03-2024"}
                 state={"Upcoming"}
-                createdBy={" Ryan"}
+                createdBy={"Dataprotection"}
               />
             </li>
           </ul>
@@ -41,7 +44,7 @@ export default function ViewHackathons() {
 
 function ViewHackathonsHeader() {
   return (
-    <header className="bg-gray-900 text-white">
+    <header className="bg-gray-900 text-white h-1/3">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="text-center sm:text-left">
@@ -69,7 +72,7 @@ function ViewHackathonsHeader() {
   );
 }
 
-function HackathonCard({ title, desc, date, state, createdBy }) {
+function HackathonCard({ id, title, desc, date, state, createdBy }) {
   let color = "";
   if (state == "Ongoing") {
     color = "bg-green-600 ";
@@ -80,9 +83,8 @@ function HackathonCard({ title, desc, date, state, createdBy }) {
   if (state == "Finished") {
     color = "bg-red-600 ";
   }
-  let id = 1;
   return (
-    <article className="rounded-xl border-2 border-gray-300 bg-white">
+    <article className="order-gray-300 bg-white">
       <div className="flex items-start gap-4 p-4 sm:p-6 lg:p-8">
         <div>
           <h3 className="font-medium sm:text-lg">

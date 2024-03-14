@@ -13,16 +13,16 @@ export default function ViewHackathon() {
       </div>
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
-          <ul className="x-data x-masonry grid grid-cols-2 gap-4">
-            <li>
+          <ul className="x-data x-masonry grid grid-cols-2 gap-8">
+            <li className="rounded-xl border-2 border-gray-300 bg-white">
               <ProjectCard
-                title={"Super cool project"}
-                desc={"This is a super cool project"}
+                title={"Website for Nedap Hackathons"}
+                desc={"This will help with organizing and promoting future hackathons"}
                 createdBy={" Dima"}
                 id={1}
               />
             </li>
-            <li>
+            <li className="rounded-xl border-2 border-gray-300 bg-white">
               <ProjectCard
                 title={"Awesome project!"}
                 desc={"There has never been a project this awesome"}
@@ -30,7 +30,7 @@ export default function ViewHackathon() {
                 id={2}
               />
             </li>
-            <li>
+            <li className="rounded-xl border-2 border-gray-300 bg-white">
               <ProjectCard
                 title={"The best project"}
                 desc={"This is the bestest project ever"}
@@ -53,15 +53,35 @@ function HackathonHeader() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="text-center sm:text-left">
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              Super cool Hackathon
+              Platform Tribe Hackathon
             </h1>
 
             <p className="mt-1.5 text-sm text-gray-500">
-              This is a super cool hackathon
+              Bring your brightest minds to this hackathon!
             </p>
+            <p><strong>Format:</strong> hybrid hackathon</p>
+            <p><strong>Location:</strong> Groenlo Building 8b-R5 Workshop Big)</p>
+            <p><strong>Zoom link:</strong> <a href="https://nedap.zoom.us/j/84702293915?pwd=RDNXeVpjWmJZcFIwNWN5bTVHRnllZz09&from=addon">https://nedap.zoom.us/j/84702293915?pwd=RDNXeVpjWmJZcFIwNWN5bTVHRnllZz09&from=addon</a> </p>
+
+    <div>
+<p className="mt-8"><strong>Schedule:</strong></p>
+    <ul className="my-4 list-circle mx-8">
+<li>Application phase: March 4th - March 6th</li>
+<li>Start date: March 7th</li>
+<li>Check-in starts at 9:00am</li>
+<li>Hacker Team Formation starts at 9:30am</li>
+<li>Hacking Mode On from 10:00am</li>
+<li>Soft deadline: March 8th at 9:00am</li>
+<li>Hard deadline: March 14 at 9:00am</li>
+<li>Presentation: March 14 at 13:30 (Inspiration Meeting - 5 minutes per team)</li>
+<li>Voting: March 15</li>
+<li>Awards and results: March 21 at the planning meeting</li>
+  </ul>
+</div>
             <p className="mt-1.5 text-sm text-gray-500">
               04-03-2024 to 11-03-2024
             </p>
+
           </div>
 
           <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
@@ -89,18 +109,18 @@ function ProjectCard({ id, title, desc, createdBy }) {
   }
 
   return (
-    <article class="rounded-xl border-2 border-gray-300 bg-white">
-      <div class="flex items-start gap-4 p-4 sm:p-6 lg:p-8">
+    <article class="">
+      <div class="flex items-start gap-8 p-4 sm:p-6 lg:p-8">
+
+        <div className="w-1/2">
         <a href="#" className="block shrink-0">
           <img
             alt=""
             src={img}
-            width="128"
-            height="128"
           />
         </a>
-
-        <div>
+      </div>
+        <div className="w-1/2">
           <h3 className="font-medium sm:text-lg">
             <a href="#" className="hover:underline">{title}</a>
           </h3>
@@ -182,10 +202,12 @@ function VoteButton() {
   return (
     <div className="mx-auto max-w-screen-xl py-8 sm:px-6 sm:py-8 lg:px-8">
       <div className="sm:flex sm:items-center sm:justify-center">
-          <button type="button"
-                  className="mb-2 block w-full rounded-lg px-5 py-3 text-sm font-medium text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-            Vote for a winner!</button>
-
+        <button
+          type="button"
+          className="mb-2 block w-full rounded-lg px-5 py-3 text-sm font-medium text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+        >
+          Vote for a winner!
+        </button>
       </div>
     </div>
   );

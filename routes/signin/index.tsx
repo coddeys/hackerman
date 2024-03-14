@@ -3,7 +3,7 @@ import { PageProps } from "$fresh/server.ts";
 export default function SignIn(props: PageProps) {
   return (
     <section class="bg-white">
-      <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+      <div class="lg:grid h-[calc(100vh-74px)] lg:grid-cols-12">
         <aside class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
           <img
             alt=""
