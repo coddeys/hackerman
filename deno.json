@@ -5,9 +5,19 @@
     "start": "deno run -A --unstable --watch=static/,routes/ dev.ts",
     "build": "deno run -A --unstable dev.ts build",
     "preview": "deno run -A --unstable main.ts",
-    "update": "deno run -A -r https://fresh.deno.dev/update ."
+    "update": "deno run -A -r https://fresh.deno.dev/update .",
+    "esm:add": "deno run -A https://esm.sh/v135 add",
+    "esm:update": "deno run -A https://esm.sh/v135 update",
+    "esm:remove": "deno run -A https://esm.sh/v135 remove"
   },
-  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.5/",
     "preact": "https://esm.sh/preact@10.19.2",
@@ -22,6 +32,11 @@
     "@twind/preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.1.4/",
     "@twind/preset-autoprefix": "https://esm.sh/@twind/preset-autoprefix@1.0.7/"
   },
-  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
-  "exclude": ["**/_fresh/*"]
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "exclude": [
+    "**/_fresh/*"
+  ]
 }
