@@ -2,9 +2,10 @@
   "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
-    "start": "deno run -A --unstable --watch=static/,routes/ dev.ts",
-    "build": "deno run -A --unstable dev.ts build",
-    "preview": "deno run -A --unstable main.ts",
+    "start": "deno run -A --allow-env --unstable-kv --watch=static/,routes/ dev.ts",
+    i
+    "build": "deno run -A --unstable-kv dev.ts build",
+    "preview": "deno run -A --unstable-kv main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "esm:add": "deno run -A https://esm.sh/v135 add",
     "esm:update": "deno run -A https://esm.sh/v135 update",
@@ -25,7 +26,8 @@
     "preact": "https://esm.sh/preact@10.19.6",
     "preact/": "https://esm.sh/preact@10.19.6/",
     "twind": "https://esm.sh/v135/*twind@0.16.19",
-    "twind/": "https://esm.sh/v135/*twind@0.16.19/"
+    "twind/": "https://esm.sh/v135/*twind@0.16.19/",
+    "oauth2_client/": "https://deno.land/x/oauth2_client@v1.0.0/"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "exclude": ["**/_fresh/*"],
