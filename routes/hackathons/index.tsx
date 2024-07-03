@@ -43,6 +43,7 @@ export default function ViewHackathons() {
 }
 
 function ViewHackathonsHeader() {
+  console.log(Deno.env.get("GITHUB_CLIENT_ID"))
   return (
     <header className="bg-gray-900 text-white h-1/3">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">

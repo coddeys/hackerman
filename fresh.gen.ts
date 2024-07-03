@@ -4,9 +4,11 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $_middleware from "./routes/_middleware.ts";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $api_users_id_ from "./routes/api/users/[id].ts";
 import * as $api_users_index from "./routes/api/users/index.ts";
+import * as $callback from "./routes/callback.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $hackathons_2 from "./routes/hackathons/2.tsx";
 import * as $hackathons_3 from "./routes/hackathons/3.tsx";
@@ -14,7 +16,10 @@ import * as $hackathons_id_ from "./routes/hackathons/[id].tsx";
 import * as $hackathons_index from "./routes/hackathons/index.tsx";
 import * as $hackathons_new_index from "./routes/hackathons/new/index.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $login_index from "./routes/login/index.tsx";
+import * as $login from "./routes/login.tsx";
+import * as $logout from "./routes/logout.tsx";
+import * as $secured_middleware from "./routes/secured/_middleware.ts";
+import * as $secured_index from "./routes/secured/index.tsx";
 import * as $signin_index from "./routes/signin/index.tsx";
 import * as $thanks_index from "./routes/thanks/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
@@ -24,9 +29,11 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/_middleware.ts": $_middleware,
     "./routes/api/joke.ts": $api_joke,
     "./routes/api/users/[id].ts": $api_users_id_,
     "./routes/api/users/index.ts": $api_users_index,
+    "./routes/callback.ts": $callback,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/hackathons/2.tsx": $hackathons_2,
     "./routes/hackathons/3.tsx": $hackathons_3,
@@ -34,7 +41,10 @@ const manifest = {
     "./routes/hackathons/index.tsx": $hackathons_index,
     "./routes/hackathons/new/index.tsx": $hackathons_new_index,
     "./routes/index.tsx": $index,
-    "./routes/login/index.tsx": $login_index,
+    "./routes/login.tsx": $login,
+    "./routes/logout.tsx": $logout,
+    "./routes/secured/_middleware.ts": $secured_middleware,
+    "./routes/secured/index.tsx": $secured_index,
     "./routes/signin/index.tsx": $signin_index,
     "./routes/thanks/index.tsx": $thanks_index,
   },
