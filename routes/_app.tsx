@@ -6,7 +6,7 @@ export default function App({ Component }: AppProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>fresh_template</title>
+        <title>Hackerman</title>
       </head>
       <body>
         <Header />
@@ -64,15 +64,6 @@ function Header() {
                 >
                   Login
                 </a>
-
-                <div className="hidden sm:flex">
-                  <a
-                    className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                    href="/signin"
-                  >
-                    Register
-                  </a>
-                </div>
               </div>
 
               <div className="block md:hidden">
